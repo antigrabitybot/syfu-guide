@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-orbitron: 'Orbitron', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+  
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-bg text-slate-100 overflow-x-hidden;
+  font-family: var(--font-sans);
+}
+
+/* グローエフェクト */
+.glow-text {
+  @apply text-neon-purple drop-shadow-[0_0_20px_rgba(168,85,247,0.5)];
+}
+
+.glow-box {
+  @apply border border-neon-purple/30 bg-neon-purple/5 shadow-[0_0_30px_rgba(168,85,247,0.2)];
+}
+
+.glow-box-hover {
+  @apply transition-all duration-300 hover:border-neon-purple/60 hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] hover:bg-neon-purple/10;
+}
+
+/* CTA ボタン */
+.btn-cta {
+  @apply px-6 py-3 rounded-lg font-bold text-white transition-all duration-300;
+  background: linear-gradient(135deg, #A855F7, #EC4899);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.btn-cta:hover {
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.6), 0 0 20px rgba(236, 72, 153, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-cta:active {
+  transform: translateY(0);
+}
+
+/* セクション背景 */
+.section-bg {
+  @apply relative overflow-hidden;
+}
+
+.section-bg::before {
+  content: '';
+  @apply absolute inset-0 pointer-events-none;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+}
+
+/* リファコード入力フォーム */
+.ref-input {
+  @apply w-full px-4 py-3 rounded-lg bg-dark-surface border border-dark-border;
+  @apply text-neon-cyan placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-neon-purple/50;
+  @apply transition-all duration-200;
+}
+
+.ref-input:focus {
+  @apply border-neon-purple/50 shadow-[0_0_20px_rgba(168,85,247,0.2)];
+}
+
+/* カードスタイル */
+.card-glass {
+  @apply rounded-lg border border-dark-border bg-dark-surface/50 backdrop-blur-xs;
+  @apply p-6 transition-all duration-300 hover:border-neon-purple/30 hover:bg-dark-surface/80;
+}
+
+/* グリッドアニメーション */
+@keyframes grid-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
