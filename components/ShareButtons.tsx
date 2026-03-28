@@ -7,7 +7,7 @@ interface ShareButtonsProps {
   className?: string;
 }
 
-export function ShareButtons({ title = 'SyFuを友達に紹介', className = '' }: ShareButtonsProps) {
+export function ShareButtons({ className = '' }: ShareButtonsProps) {
   return (
     <div className={`space-y-3 ${className}`}>
       <p className="text-sm font-bold text-slate-300 uppercase tracking-wider">

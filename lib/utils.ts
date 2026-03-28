@@ -1,3 +1,9 @@
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 export const referralUtils = {
   /**
    * リファコードをlocalStorageに保存
