@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-
 export function Footer() {
   return (
     <footer className="relative border-t border-dark-border/50 bg-dark-surface/50 backdrop-blur-sm mt-20">
