@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "syfu-guide",
   "version": "1.0.0",
   "description": "SyFu GameFi Platform - Official Guide & Referral Site",
